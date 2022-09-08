@@ -8,6 +8,45 @@
     <link rel="shortcut-icon" href="favicon.ico">
 </head>
 <body class="body">
-
+    <div class="body-wrapper">
+        <header class="header">
+            <div class="header-wrapper">
+                <div class="header__theme">
+                    <input class="header__theme__toggle" type="checkbox" id="lngToggle" />
+                    <label class="header__theme__label" for="lngToggle">Theme</label>
+                </div>
+                <div class="language-box">
+                    <p class="language-box__item--eng lng-item">EN</p>
+                    <span class="slash">/</span>
+                    <p class="language-box__item--rus lng-item">RU</p>
+                </div>
+            </div>
+              <svg viewBox = '0 0 500 70'>
+                <text class="header__title lng-item" x="50%" y ='50' text-anchor="middle" font-size="30px">TODO</text>
+            </svg>  
+        </header>
+         <main class="main">
+            <section class="search">
+                  <div class="content-inner">  
+                    <div class="search__wrapper">
+                        <form action="#" class="search-form">
+                            <input type="text" class="search-form__input" placeholder="Create a new todo...">
+                              <button class="search-form__button">&#43</button> 
+                        </form>
+                    </div>
+               </div> 
+            </section>
+            <section class="task-box">
+                <div class="content-inner">
+                    <ul class="task-box__list"></ul>
+                </div>
+            </section> 
+        </main>  
+    <footer class="footer">
+            <a href="https://github.com/PolinaTcaciuc" class="github">
+                <img class="footer__icon" src="./images/github-icon.png" alt="github icon">
+            </a>
+        </footer> 
+    </div>
 </body>
 </html>
