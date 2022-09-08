@@ -1,0 +1,22 @@
+html,
+.body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  font-family: MondaRegular, "IBM Plex Sans", sans-serif;
+  // temporarily
+  background-color: rgb(81 78 85);
+}
+
+.body-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1120px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.main {
+  flex: 1;
+}
