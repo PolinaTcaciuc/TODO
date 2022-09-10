@@ -1,1 +1,7 @@
+// variables
 $white-color: rgb(255 255 255 / 100%);
+$green-color: rgb(90 255 49 / 100%);
+// classes
+.available {
+  border-bottom: 1px solid $green-color;
+}

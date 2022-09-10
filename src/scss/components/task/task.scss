@@ -1,63 +1,62 @@
-.task-box {
-  &__list {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding: 10px 10px 0;
-  }
-  &__item {
-    position: relative;
-    justify-content: flex-start;
-    padding: 2% 3em 2% 2%;
-    overflow: hidden;
-    border: 1px solid $white-color;
-    .no-complete {
-      position: relative;
-      display: inline-block;
-      max-width: 90%;
-      padding-left: 5px;
-      font-size: 22px;
-      word-wrap: break-word;
-      background-color: transparent;
-      border: none;
-      outline: none;
-      cursor: pointer;
-    }
+.task-box__list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 10px 10px 0;
+}
 
-    @extend %sample-flex;
-    &:hover .delete {
-      position: absolute;
-      right: 0.1%;
-      bottom: 0%;
-      display: block;
-      width: 20px;
-      height: 20px;
-      background: url("/src/images/trash-icon.svg") center center/cover no-repeat;
-      cursor: pointer;
-      content: "";
-    }
-    &:hover .edit {
-      position: absolute;
-      top: 0%;
-      right: 0.1%;
-      display: block;
-      width: 18px;
-      height: 20px;
-      background: url("/src/images/pencil-icon.svg") center center/cover no-repeat;
-      cursor: pointer;
-      content: "";
-    }
-    .no-complete-btn {
-      position: relative;
-      display: inline-block;
-      flex-shrink: 0;
-      width: 40px;
-      height: 40px;
-      background: transparent;
-      border: 1px solid $white-color;
-      border-radius: 50%;
-      cursor: pointer;
-    }
+.task-box__item {
+  position: relative;
+  justify-content: flex-start;
+  padding: 2% 3em 2% 2%;
+  overflow: hidden;
+  border: 1px solid $white-color;
+  .task-box__text {
+    position: relative;
+    display: inline-block;
+    max-width: 90%;
+    padding-left: 5px;
+    font-size: 22px;
+    word-wrap: break-word;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  @extend %sample-flex;
+  &:hover .task-box__trash {
+    position: absolute;
+    right: 0.1%;
+    bottom: 0%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("/src/images/trash-icon.svg") center center/cover no-repeat;
+    cursor: pointer;
+    content: "";
+  }
+  &:hover .task-box__edit {
+    position: absolute;
+    top: 0%;
+    right: 0.1%;
+    display: block;
+    width: 18px;
+    height: 20px;
+    background: url("/src/images/pencil-icon.svg") center center/cover no-repeat;
+    cursor: pointer;
+    content: "";
+  }
+  .task-box__button {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid $white-color;
+    border-radius: 50%;
+    cursor: pointer;
   }
 }
