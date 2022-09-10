@@ -1,0 +1,63 @@
+.dark .body {
+  width: 100vw;
+  height: 100vh;
+  background: $black-color url("/src/images/stars.png");
+}
+
+.dark .header__theme__label::after {
+  background-color: $grey-color;
+}
+
+.dark .twinkling {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: inline-block;
+  width: 100%;
+  animation: move-twinkling-back 200s linear infinite;
+}
+
+.dark .clouds {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: inline-block;
+  width: 100%;
+  background: transparent url("/src/images/clouds.png") repeat-x top center;
+  opacity: 0.4;
+  animation: move-clouds-back 500s linear infinite;
+}
+
+.dark .task-box__item {
+  color: $white-color;
+  background-color: $dt-accent;
+  border-bottom: 2px solid $dt-accent;
+}
+
+.dark .task-box__item:last-child {
+  margin-bottom: 0;
+}
+
+.dark .task-box__footer {
+  color: $white-color;
+  background-color: $dt-accent;
+  border: 2px solid $dt-accent;
+}
+
+.dark .search-form__button {
+  background-color: $dt-khaki;
+}
+
+.dark .header__title {
+  fill: $white-color;
+}
+
+.dark .language-box {
+  color: $white-color;
+}
