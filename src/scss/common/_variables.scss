@@ -1,7 +1,18 @@
 // variables
 $white-color: rgb(255 255 255 / 100%);
 $green-color: rgb(90 255 49 / 100%);
+$completeColor: rgb(15 144 161 / 57%);
 // classes
 .available {
   border-bottom: 1px solid $green-color;
+}
+
+.hide {
+  display: none !important;
+}
+
+.text-compleate {
+  color: $completeColor;
+  text-decoration: line-through;
+  text-decoration-color: rgb(255 255 255 / 50%);
 }
