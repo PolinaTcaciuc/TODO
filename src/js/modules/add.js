@@ -1,6 +1,7 @@
 import Task from './Task';
 import tasks from './variables';
 import { saveTaskCondition } from './localsettings';
+import footer from './footer';
 
 /* ------------------- adding a task ------------------- */
 function addTask(e) {
@@ -13,6 +14,7 @@ function addTask(e) {
     inputCreateTask.value = '';
     inputCreateTask.focus();
     saveTaskCondition();
+    footer(tasks.length);
   }
 }
 

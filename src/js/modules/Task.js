@@ -1,5 +1,6 @@
 import tasks from './variables';
-import {saveTaskCondition} from './localsettings';
+import { saveTaskCondition } from './localsettings';
+import footer from './footer';
 
 /* this class generates a task object that has the following properties:
  ID, status(done) and task text.
@@ -33,11 +34,11 @@ class Task {
     element.innerHTML = html;
     tasksList.prepend(element);
     saveTaskCondition();
+    footer(tasks.length);
   }
   /* ------------------- edit task ------------------- */
 
   editTask(element) {
-    console.log(888);
     const pencil = element.querySelector('.task-box__edit');
     const text = element.querySelector('.task-box__text');
     pencil.classList.toggle('available');
@@ -56,13 +57,7 @@ class Task {
       selection.addRange(range);
       text.addEventListener('input', () => {
         element.text = text.textContent;
-        console.log(element);
-        console.log(tasks);
-        const task = tasks.find((task) => {
-          if (task.id == element.id) {
-            return true;
-          }
-        });
+        const task = tasks.find((task) => ((task.id == element.id) ? true : ''));
         task.text = text.textContent;
         saveTaskCondition();
       });
@@ -74,10 +69,11 @@ class Task {
   /* ------------------- delete task ------------------- */
 
   deleteTask(element) {
-    const index = tasks.findIndex((task) => task.id == element.id);
+    const index = tasks.findIndex((task) => task.id === element.id);
     tasks.splice(index, 1);
     element.remove();
     saveTaskCondition();
+    footer(tasks.length);
   }
 }
 

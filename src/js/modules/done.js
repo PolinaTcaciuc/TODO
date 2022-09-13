@@ -2,8 +2,8 @@ import tasks from './variables';
 import { saveTaskCondition } from './localsettings';
 
 function done(parentNode) {
-  const task = tasks.find((task) => {
-    if (task.id == parentNode.id) {
+  const task = tasks.find((taskItem) => {
+    if (String(taskItem.id) === parentNode.id) {
       return true;
     }
   });

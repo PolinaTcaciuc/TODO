@@ -11,7 +11,7 @@ document.querySelector('.search-form').addEventListener('submit', addTask);
 document.querySelector('.task-box__list').addEventListener('click', (e) => {
   const parentNode = e.target.closest('li');
   tasks.forEach((item) => {
-    if (item.id == parentNode.id) {
+    if (String(item.id) === parentNode.id) {
       if (e.target.classList.contains('task-box__trash')) {
         item.deleteTask(parentNode);
       } else if (e.target.classList.contains('task-box__edit')) {
@@ -22,6 +22,8 @@ document.querySelector('.task-box__list').addEventListener('click', (e) => {
     }
   });
 });
+/* ------------------- call toggle theme ------------------- */
+
 document.querySelector('.header__theme__toggle').addEventListener('click', () => {
   if (document.querySelector('.header__theme__toggle').checked) {
     theme('check');
@@ -29,6 +31,7 @@ document.querySelector('.header__theme__toggle').addEventListener('click', () =>
     theme('notcheck');
   }
 });
+/* ------------------- call lang ------------------- */
 
 document.querySelector('.language-box').addEventListener('click', (e) => {
   if (e.target.classList.contains('language-box__item--eng')) {

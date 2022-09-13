@@ -11,7 +11,6 @@
   justify-content: flex-start;
   padding: 2% 3em 2% 2%;
   overflow: hidden;
-  border: 1px solid $white-color;
   .task-box__text {
     position: relative;
     display: inline-block;
@@ -88,4 +87,32 @@
   cursor: pointer;
   opacity: 1;
   content: url("/src/images/check-icon.svg");
+}
+
+.task-box__footer {
+  @extend %sample-flex;
+
+  z-index: 20;
+  justify-content: space-between;
+  max-height: 60px;
+  padding: 2% 3em 2% 2%;
+  font-size: calc(11px + (15 - 11) * (100vw - 400px) / (1200 - 400));
+  list-style: none;
+  .task-box__delete {
+    z-index: 20;
+    text-align: center;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    &:hover {
+      border-bottom: 1px solid $violet-color;
+    }
+  }
+  .task-box__number {
+    z-index: 20;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    &:hover {
+      z-index: 20;
+    }
+  }
 }

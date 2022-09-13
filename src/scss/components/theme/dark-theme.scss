@@ -44,12 +44,6 @@
   margin-bottom: 0;
 }
 
-.dark .task-box__footer {
-  color: $white-color;
-  background-color: $dt-accent;
-  border: 2px solid $dt-accent;
-}
-
 .dark .search-form__button {
   background-color: $dt-khaki;
 }
@@ -60,4 +54,9 @@
 
 .dark .language-box {
   color: $white-color;
+}
+
+.dark .task-box__footer {
+  color: $white-color;
+  background-color: $dt-accent;
 }
