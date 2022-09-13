@@ -96,10 +96,9 @@
   z-index: 20;
   justify-content: space-between;
   max-height: 60px;
-  padding: 10px;
+  padding: 2%;
   list-style: none;
   .task-box__delete {
-    z-index: 20;
     text-align: center;
     border-bottom: 1px solid transparent;
     cursor: pointer;
@@ -108,11 +107,6 @@
     }
   }
   .task-box__number {
-    z-index: 20;
     border-bottom: 1px solid transparent;
-    cursor: pointer;
-    &:hover {
-      z-index: 20;
-    }
   }
 }

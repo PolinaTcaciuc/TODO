@@ -29,7 +29,7 @@ class Task {
     const html = `
          <button class="${cssButtonClasses}" data-action ='done'></button>
          <div class="task-box__trash" data-action='delete'></div>
-         <div class="task-box__edit" data-action='edit'></div>
+         <div class="task-box__edit ${task.done === true ? 'hide' : ''}" data-action='edit'></div>
          <div contenteditable='false' type="text" class="${cssClass}">${this.text}</div>`;
     element.innerHTML = html;
     tasksList.prepend(element);
