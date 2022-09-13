@@ -2,8 +2,11 @@
   display: flex;
   flex-direction: column;
   margin-top: 0;
-  margin-bottom: 0;
-  padding: 10px 10px 0;
+  margin-bottom: 30px;
+}
+
+.task-box__list:last-child {
+  padding-right: 0;
 }
 
 .task-box__item {
@@ -77,11 +80,9 @@
 
 .check::after {
   position: absolute;
-  top: 80%;
+  top: 50%;
   left: 50%;
   display: block;
-  width: 40px;
-  height: 40px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
@@ -95,8 +96,7 @@
   z-index: 20;
   justify-content: space-between;
   max-height: 60px;
-  padding: 2% 3em 2% 2%;
-  font-size: calc(11px + (15 - 11) * (100vw - 400px) / (1200 - 400));
+  padding: 10px;
   list-style: none;
   .task-box__delete {
     z-index: 20;

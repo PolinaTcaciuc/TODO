@@ -4,8 +4,6 @@ html,
   height: 100vh;
   overflow-x: hidden;
   font-family: MondaRegular, "IBM Plex Sans", sans-serif;
-  // temporarily
-  // background-color: rgb(115 93 93);
 }
 
 .body-wrapper {
@@ -14,7 +12,15 @@ html,
   max-width: 1120px;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 1%;
+  padding: 15px;
+}
+
+.content-inner {
+  max-width: 660px;
+  max-width: 70%;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .main {

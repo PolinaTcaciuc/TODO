@@ -5,7 +5,15 @@
 }
 
 .dark .header__theme__label::after {
-  background-color: $grey-color;
+  background-color: $dt-toggle;
+}
+
+.dark .header__theme__label {
+  border: 1px solid $dt-toggle;
+}
+
+.dark .header .header-wrapper .language-box {
+  color: $white-color;
 }
 
 .dark .twinkling {
@@ -50,10 +58,6 @@
 
 .dark .header__title {
   fill: $white-color;
-}
-
-.dark .language-box {
-  color: $white-color;
 }
 
 .dark .task-box__footer {

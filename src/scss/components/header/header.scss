@@ -1,5 +1,8 @@
 .header {
   position: relative;
+  &__title {
+    user-select: none;
+  }
   &__theme {
     @extend %sample-flex;
     &__label {
@@ -22,8 +25,6 @@
       left: 0;
       width: 30px;
       height: 28px;
-      // temporarily
-      background-color: rgb(195 191 207);
       border-radius: 90px;
       content: "";
     }
@@ -41,6 +42,7 @@
       background-position: left top;
       background-size: 20px 26px;
       background-size: contain;
+      border: 1px solid $white-color;
     }
     &__toggle:checked + &__label::after {
       left: 100%;
@@ -58,7 +60,9 @@
       @extend %sample-flex;
 
       justify-content: flex-end;
+      color: $wt-grey;
       font-size: 100%;
+      user-select: none;
       &__item--rus,
       &__item--eng {
         cursor: pointer;
