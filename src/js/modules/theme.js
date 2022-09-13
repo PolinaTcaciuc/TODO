@@ -5,8 +5,12 @@ function theme(toggleValue) {
     SetWhiteTheme();
   }
 }
+/* ------------------- dark theme ------------------- */
 
 function SetDarkTheme() {
+  localStorage.setItem('theme', 'dark');
+  document.querySelector('html').removeAttribute('class');
+  document.querySelector('html').classList.add('dark');
   const body = document.querySelector('.body');
   if (document.querySelector('.sun')) {
     document.querySelector('.sun').remove();
@@ -15,8 +19,6 @@ function SetDarkTheme() {
       cloudsWhite[i].remove();
     }
   }
-  document.querySelector('html').removeAttribute('class');
-  document.querySelector('html').classList.add('dark');
   const twinkling = document.createElement('div');
   const clouds = document.createElement('div');
   twinkling.classList.add('twinkling');
@@ -24,8 +26,10 @@ function SetDarkTheme() {
   body.append(twinkling);
   body.append(clouds);
 }
+/* ------------------- white theme ------------------- */
 
 function SetWhiteTheme() {
+  localStorage.setItem('theme', 'white');
   const deviceScreen = window.screen.width;
   const header = document.querySelector('.header');
 
