@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TODO</title>
-    <meta name="description"content="TODO — приложение-планировщик,которое поможет Вам стать наиболее продуктивным!">
+    <meta name="description" content="TODO — приложение-планировщик,которое поможет Вам стать наиболее продуктивным!">
     <meta name="keywords" content="Todo,планировщик задач">
     <meta name="author" content="Polina Tcaciuc">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="TODO — приложение-планировщик">
-    <meta property="og:description" content="которое поможет Вам стать наиболее продуктивным!">
+    <meta property="og:title" content="TODO — твой планировщик">
+    <meta property="og:description" content="планируй грамотно и становись наиболее продуктивным!">
     <meta property="og:image" content="./assets/logo.png">
     <link rel="apple-touch-icon" sizes="57x57" href="./assets/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./assets/apple-icon-60x60.png">
@@ -22,54 +22,53 @@
     <link rel="apple-touch-icon" sizes="144x144" href="./assets/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="./assets/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="./assets/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
     <link rel="manifest" href="./assets/manifest.json">
-     <meta name="msapplication-TileImage" content="./assets/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="./assets/ms-icon-144x144.png">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="theme-color" content="#b7b8b9">
+    <meta name="theme-color" content="#c7cdd6">
     <meta name="apple-mobile-web-app-title" content="TODO">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="me" href="https://github.com/PolinaTcaciuc">
     <link rel="me" href="mailto:polinatcaciuc@gmail.com">
-   <link rel="author" href="humans.txt">
+    <link rel="author" href="humans.txt">
 </head>
+
 <body class="body">
     <div class="body-wrapper">
         <header class="header">
             <div class="header-wrapper">
                 <div class="header__theme">
                     <input class="header__theme__toggle" type="checkbox" id="lngToggle" />
-                    <label class="header__theme__label" for="lngToggle">.</label>
+                    <label class="header__theme__label" for="lngToggle"></label>
                 </div>
                 <div class="language-box">
-                    <p class="language-box__item--eng lng-item">EN</p>
+                    <p class="language-box__item--eng lng-item" translate="no">EN</p>
                     <span class="slash">/</span>
-                    <p class="language-box__item--rus lng-item">RU</p>
+                    <p class="language-box__item--rus lng-item" translate="no">RU</p>
                 </div>
             </div>
-            <svg viewBox='0 0 500 65'>
-                <text class="header__title lng-item" x="50%" y='50' text-anchor="middle" font-size="30px">TODO</text>
+            <svg viewBox='0 0 500 80'>
+                <text class="header__title lng-item" x="50%" y='55' text-anchor="middle">TODO</text>
             </svg>
         </header>
         <main class="main">
-            <section class="search">
-                <div class="content-inner">
+            <div class="content-inner">
+                <section class="search">
                     <div class="search__wrapper">
                         <form action="#" class="search-form">
                             <input type="text" class="search-form__input" placeholder="Create a new todo...">
-                            <button class="search-form__button">&#43</button>
+                            <button class="search-form__button">&#43;</button>
                         </form>
                     </div>
-                </div>
-            </section>
-            <section class="task-box">
-                <div class="content-inner">
+                </section>
+                <section class="task-box">
                     <ul class="task-box__list"></ul>
-                </div>
-            </section>
+                </section>
+            </div>
         </main>
         <footer class="footer">
             <a href="https://github.com/PolinaTcaciuc" class="footer__link">
@@ -77,6 +76,7 @@
             </a>
         </footer>
     </div>
+    <div class="cache-stars"></div>
 </body>
 
 </html>

@@ -1,5 +1,11 @@
 @media screen and (max-width: 500px) {
   .header .header-wrapper .language-box {
-    font-size: $fz-13;
+    font-size: $fz-17;
+  }
+  .header-wrapper {
+    margin-bottom: 30px;
+  }
+  .header__title {
+    font-size: 40px;
   }
 }

@@ -12,13 +12,12 @@ function SetDarkTheme() {
   document.querySelector('html').removeAttribute('class');
   document.querySelector('html').classList.add('dark');
   const body = document.querySelector('.body');
-  if (document.querySelector('.sun')) {
-    document.querySelector('.sun').remove();
+  document.querySelector('.sun') ?  document.querySelector('.sun').remove() : '';
     const cloudsWhite = document.querySelectorAll('.cloud');
     for (let i = 0; i < cloudsWhite.length; i++) {
       cloudsWhite[i].remove();
     }
-  }
+  
   const twinkling = document.createElement('div');
   const clouds = document.createElement('div');
   twinkling.classList.add('twinkling');

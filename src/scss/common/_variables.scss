@@ -35,3 +35,11 @@ $fz-13: 13px;
   text-decoration: line-through;
   text-decoration-color: rgb(255 255 255 / 50%);
 }
+
+.active-lang {
+  border-bottom: 1px solid $green-color;
+}
+
+.white .active-lang {
+  border-bottom: 1px solid $violet-color;
+}

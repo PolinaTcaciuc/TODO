@@ -1,7 +1,12 @@
 .dark .body {
   width: 100vw;
   height: 100vh;
-  background: $black-color url("/src/images/stars.png");
+  background-color: black;
+  background-image: url("/src/images/stars.png");
+}
+
+.dark .cache-stars {
+  display: none;
 }
 
 .dark .header__theme__label::after {

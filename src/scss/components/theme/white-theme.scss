@@ -1,9 +1,11 @@
 .white .body {
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
   background-color: $wt-blue;
-  background-image: none;
+}
+
+.white .cache-stars {
+  background-image: url("/src/images/stars.png");
 }
 
 .white .header__theme__label::after {
