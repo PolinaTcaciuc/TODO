@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 /* ------------------- mode ------------------- */
 const isDev = process.env.NODE_ENV === 'development';
@@ -26,15 +27,52 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
         filename: `./js/${filename('js')}`,
-        assetModuleFilename: 'assets/images/[name][ext]'
-
+        assetModuleFilename: 'assets/[name][ext]' 
     },
+    optimization: {
+        minimizer: [
+          "...",
+          new ImageMinimizerPlugin({
+            minimizer: {
+              implementation: ImageMinimizerPlugin.imageminMinify,
+              options: {
+                plugins: [
+                  ["gifsicle", { interlaced: true }],
+                  ["jpegtran", { progressive: true }],
+                  ["optipng", { optimizationLevel: 5 }],
+                  [
+                    "svgo",
+                    {
+                      plugins: [
+                        {
+                          name: "preset-default",
+                          params: {
+                            overrides: {
+                              removeViewBox: false,
+                              addAttributesToSVGElement: {
+                                params: {
+                                  attributes: [
+                                    { xmlns: "http://www.w3.org/2000/svg" },
+                                  ],
+                                },
+                              },
+                            },
+                          },
+                        },
+                      ],
+                    },
+                  ],
+                ],
+              },
+            },
+          }),
+        ],
+      },
     /* ------------------- plugins ------------------- */
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src', 'index.html'),
             filename: 'index.html',
-            favicon: path.resolve(__dirname, 'src', 'favicon.ico'),
             minify: {
                 collapseWhitespace: isProd
             }
@@ -42,6 +80,14 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: `./css/${filename('css')}`
         }),
+        new CopyPlugin({
+            patterns: [
+              { from: path.resolve(__dirname, 'src/assets'), to: path.resolve(__dirname, 'dist/assets')},
+              { from: path.resolve(__dirname, './robots.txt'), to: path.resolve(__dirname, 'dist') },
+              { from: path.resolve(__dirname, './humans.txt'), to: path.resolve(__dirname, 'dist') },
+      
+            ],
+          }),
     ],
     /* ------------------- module ------------------- */
     module: {
@@ -93,6 +139,7 @@ module.exports = {
                 options: {
                   presets: [['@babel/preset-env', {
                       corejs: 3,
+                      useBuiltIns: "usage"
                   }]]
                 }
               }

@@ -1,0 +1,32 @@
+.body {
+  width: 100vw;
+  height: 100vh;
+  font-family: MondaRegular, "IBM Plex Sans", sans-serif;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  margin-right: calc(-1 * (100vw - 100%));
+  overflow-x: hidden;
+}
+
+.body-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1120px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.content-inner {
+  max-width: 70%;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.main {
+  flex: 1;
+}

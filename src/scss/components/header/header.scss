@@ -1,0 +1,73 @@
+.header {
+  position: relative;
+  &__title {
+    font-size: 35px;
+    user-select: none;
+  }
+  &__theme {
+    @extend %sample-flex;
+    &__label {
+      position: relative;
+      display: block;
+      width: 60px;
+      height: 30px;
+      text-indent: -9999px;
+      background-image: url("/src/images/moon-toggle.svg");
+      background-repeat: no-repeat;
+      background-position: right top;
+      background-size: 20px 26px;
+      border: 1px solid rgb(0 0 0);
+      border-radius: 100px;
+      cursor: pointer;
+    }
+    &__label::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 28px;
+      border-radius: 90px;
+      content: "";
+    }
+    &__label:active::after {
+      width: 58px;
+    }
+    &__toggle {
+      width: 0;
+      height: 0;
+      visibility: hidden;
+    }
+    &__toggle:checked + &__label {
+      background-image: url("/src/images/sun-toggle.svg");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 20px 26px;
+      background-size: contain;
+      border: 1px solid $white-color;
+    }
+    &__toggle:checked + &__label::after {
+      left: 100%;
+      transform: translateX(-100%);
+    }
+  }
+  .header-wrapper {
+    @extend %sample-flex;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5%;
+    .language-box {
+      @extend %sample-flex;
+
+      justify-content: flex-end;
+      color: $wt-grey;
+      font-size: 100%;
+      user-select: none;
+      &__item--rus,
+      &__item--eng {
+        cursor: pointer;
+      }
+    }
+  }
+}

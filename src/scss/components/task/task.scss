@@ -1,0 +1,112 @@
+.task-box__list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.task-box__list:last-child {
+  padding-right: 0;
+}
+
+.task-box__item {
+  position: relative;
+  justify-content: flex-start;
+  padding: 2% 3em 2% 2%;
+  overflow: hidden;
+  .task-box__text {
+    position: relative;
+    display: inline-block;
+    max-width: 90%;
+    padding-left: 5px;
+    font-size: 22px;
+    word-wrap: break-word;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  @extend %sample-flex;
+  &:hover .task-box__trash {
+    position: absolute;
+    right: 0.1%;
+    bottom: 0%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("/src/images/trash-icon.svg") center center/cover no-repeat;
+    cursor: pointer;
+    content: "";
+  }
+  &:hover .task-box__edit {
+    position: absolute;
+    top: 0%;
+    right: 0.1%;
+    display: block;
+    width: 18px;
+    height: 20px;
+    background: url("/src/images/pencil-icon.svg") center center/cover no-repeat;
+    cursor: pointer;
+    content: "";
+  }
+  .task-box__button {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid $white-color;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+.check::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(111.35deg, rgb(230 0 250) 10.12%, rgb(82 97 234 / 0%) 82.22%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  opacity: 1;
+  content: "";
+}
+
+.check::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  opacity: 1;
+  content: url("/src/images/check-icon.svg");
+}
+
+.task-box__footer {
+  @extend %sample-flex;
+
+  z-index: 20;
+  justify-content: space-between;
+  max-height: 60px;
+  padding: 2%;
+  list-style: none;
+  .task-box__delete {
+    text-align: center;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    &:hover {
+      border-bottom: 1px solid $violet-color;
+    }
+  }
+  .task-box__number {
+    border-bottom: 1px solid transparent;
+  }
+}

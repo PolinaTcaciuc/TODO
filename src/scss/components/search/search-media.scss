@@ -1,0 +1,17 @@
+@media screen and (max-width: 500px) {
+  .search-form__input {
+    font-size: $fz-17;
+  }
+  .search-form__button {
+    font-size: $fz-17;
+  }
+  .search-form__input::placeholder {
+    font-size: $fz-17;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .search-form__input::placeholder {
+    font-size: $fz-13;
+  }
+}

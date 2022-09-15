@@ -1,0 +1,45 @@
+// variables
+$white-color: rgb(255 255 255 / 100%);
+$green-color: rgb(90 255 49 / 100%);
+$complete-color: rgb(15 144 161 / 57%);
+$grey-color: rgb(183 183 184);
+$black-color: rgb(0 0 0);
+$violet-color: rgb(191 86 255 / 79%);
+// white-theme variable
+
+$wt-pale-green: rgb(152 212 91 / 74%);
+$wt-blue: rgb(179 232 255 / 89%);
+$wt-grey: rgb(183 183 184);
+$wt-pale-white: rgb(254 249 255 / 94.4%);
+$wt-cloud-white: rgb(246 249 247);
+$wt-toggle: rgb(34 54 75);
+// dark-theme variables
+$dt-accent: rgb(74 83 83 / 48%);
+$dt-khaki: rgb(74 83 83 / 48%);
+$dt-toggle: rgb(37 39 60 / 100%);
+// font-size variables
+$fz-20: 20px;
+$fz-17: 17px;
+$fz-13: 13px;
+// classes
+.available {
+  border-bottom: 1px solid $green-color;
+}
+
+.hide {
+  display: none !important;
+}
+
+.text-compleate {
+  color: $complete-color;
+  text-decoration: line-through;
+  text-decoration-color: rgb(255 255 255 / 50%);
+}
+
+.active-lang {
+  border-bottom: 1px solid $green-color;
+}
+
+.white .active-lang {
+  border-bottom: 1px solid $violet-color;
+}

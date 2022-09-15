@@ -1,0 +1,17 @@
+@media screen and (max-width: 500px) {
+  .task-box__item .task-box__text {
+    font-size: $fz-17;
+  }
+  .task-box__footer {
+    font-size: 15px;
+  }
+  .task-box__delete {
+    width: 105px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .task-box__footer {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,40 @@
+.white .body {
+  width: 100vw;
+  height: 100vh;
+  background-color: $wt-blue;
+}
+
+.white .cache-stars {
+  background-image: url("/src/images/stars.png");
+}
+
+.white .header__theme__label::after {
+  background-color: $white-color;
+}
+
+.white .header__title {
+  fill: $wt-grey;
+}
+
+.white .search-form__button {
+  background-color: $wt-pale-green;
+}
+
+.white .task-box__item {
+  color: $white-color;
+  background-color: $wt-pale-green;
+  border-bottom: 1px solid  $wt-pale-white;
+}
+
+.white .task-box__done {
+  border: 2px solid  $white-color;
+}
+
+.white .language-box {
+  color: $white-color;
+}
+
+.white .task-box__footer {
+  color: white;
+  background-color: $wt-pale-green;
+}

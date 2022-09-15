@@ -1,0 +1,74 @@
+@keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+@keyframes move-twinkling-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 10000px 5000;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(220deg);
+  }
+}
+
+@keyframes cloud_one {
+  0% {
+    left: 20%;
+  }
+  50% {
+    left: 65%;
+  }
+  100% {
+    left: 20%;
+  }
+}
+
+@keyframes cloud_two {
+  0% {
+    left: 60%;
+  }
+  50% {
+    left: 20%;
+  }
+  100% {
+    left: 60%;
+  }
+}
+
+@keyframes cloud_three {
+  0% {
+    left: 80%;
+  }
+  50% {
+    left: 10%;
+  }
+  100% {
+    left: 80%;
+  }
+}
+
+@keyframes cloud_four {
+  0% {
+    left: 25%;
+  }
+  50% {
+    left: 65%;
+  }
+  100% {
+    left: 25%;
+  }
+}

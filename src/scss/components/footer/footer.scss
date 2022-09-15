@@ -1,0 +1,14 @@
+.footer {
+  @extend %sample-flex;
+
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__icon {
+  max-width: 150px;
+  max-height: 150px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
