@@ -1,6 +1,7 @@
 import tasks from './variables';
 import { numberGlossary } from './glossary';
 import { saveTaskCondition } from './localsettings';
+/* ------------------- footer ------------------- */
 
 function footer(num) {
   if (num === 0 && document.querySelector('.task-box__footer')) {

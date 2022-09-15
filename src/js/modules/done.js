@@ -1,5 +1,6 @@
 import tasks from './variables';
 import { saveTaskCondition } from './localsettings';
+/* ------------------- done(status) ------------------- */
 
 function done(parentNode) {
   const task = tasks.find((taskItem) => {

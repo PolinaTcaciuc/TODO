@@ -1,4 +1,5 @@
 import tasks from './variables';
+/* ------------------- glossary ------------------- */
 
 function setLang(langPage) {
   const languageItems = document.querySelectorAll('.lng-item');
@@ -20,6 +21,7 @@ function setLang(langPage) {
   }
   inputCreateTask.placeholder = placeholderLangGlossary[langPage];
 }
+/* ------------------- number glossary ------------------- */
 
 function numberGlossary(langPage) {
   if (langPage === 'ru') {

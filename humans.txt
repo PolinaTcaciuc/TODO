@@ -3,7 +3,7 @@
 	mail: polinatcaciuc@gmail.com
 	From: St.Petersburg, Russia
 /* SITE */
-	Last update:09/13/2022 
+	Last update:09/15/2022 
 	Language:  English / Russian 
 	Doctype:HTML5
 	IDE: Visual Studio Code
