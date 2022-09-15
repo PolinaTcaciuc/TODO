@@ -12,11 +12,12 @@
   "author": "",
   "license": "ISC",
   "browserslist": [
-    " > 1%"
+    "defaults"
   ],
   "devDependencies": {
     "@babel/core": "^7.19.0",
     "@babel/preset-env": "^7.19.0",
+    "autoprefixer": "^10.4.11",
     "babel-loader": "^8.2.5",
     "copy-webpack-plugin": "^11.0.0",
     "core-js": "^3.25.1",
